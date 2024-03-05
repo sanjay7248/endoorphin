@@ -8,6 +8,7 @@ const sendOtp = async (req, res) => {
     try {
         const phoneNumber = req.body.phoneNumber;
         const otp = Math.floor(100000 + Math.random() * 900000);
+        console.log('=');
         res.status(200).json({ otp:otp });
     } catch (error) {
         console.error('Error sending OTP:', error);
